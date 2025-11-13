@@ -1,349 +1,548 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>최성장 | AI Backend Developer</title>
-  <style>
-    body {
-      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: #333;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #f7f7f9;
-    }
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
-      margin: 30px auto 10px;
-      padding: 20px;
-    }
-    .header-container h1 {
-      font-size: 26px;
-      margin-bottom: 4px;
-    }
-    .header-container p {
-      font-size: 16px;
-      color: #666;
-      margin: 0;
-    }
-    .header-left {
-      text-align: left;
-    }
-    .header-right p {
-      margin: 2px 0;
-      text-align: right;
-    }
-    .header-right a {
-      color: inherit;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .header-right a:hover {
-      color: #146919;
-    }
-    .portfolio-link {
-      display: inline-block;
-      color: #333;
-      text-decoration: none;
-      border-bottom: 2px solid #333;
-      padding-bottom: 2px;
-      margin-top: 4px;
-    }
-    .portfolio-link:hover {
-      color: #146919;
-      border-color: #146919;
-    }
-    .container {
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto 40px;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      padding-bottom: 20px;
-    }
-    .sub-title {
-      text-align: center;
-      font-size: 24px;
-      margin: 24px 0 8px;
-      font-weight: 700;
-    }
-    .about-me {
-      padding: 0 24px 24px;
-    }
-    .about-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      padding: 8px 0 0;
-    }
-    .about-image img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid #ddd;
-    }
-    .about-text {
-      text-align: left;
-      max-width: 900px;
-    }
-    .about-text p {
-      font-size: 15px;
-      color: #444;
-      margin: 4px 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최성장 | Backend & AI Engineer</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
 
-    .experience-section-title {
-      text-align: center;
-      font-size: 22px;
-      margin: 16px 0;
-      font-weight: 700;
-    }
-    .experience-container {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 20px 24px;
-      border-top: 1px solid #eee;
-    }
-    .experience-left {
-      width: 320px;
-      text-align: left;
-      flex-shrink: 0;
-      font-size: 14px;
-    }
-    .experience-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .experience-right {
-      flex-grow: 1;
-      text-align: left;
-      font-size: 14px;
-    }
-    .project-title {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    .badge {
-      display: inline-block;
-      background-color: #777;
-      color: #fff;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 12px;
-      margin-top: 6px;
-      margin-bottom: 4px;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 4px 0 8px;
-    }
-    li {
-      margin-bottom: 3px;
-    }
-    li::before {
-      content: "∙ ";
-      color: #555;
-      margin-right: 4px;
-    }
-    a {
-      color: inherit;
-    }
-    a:hover {
-      color: #146919;
-    }
-    .summary-section {
-      padding: 16px 24px 24px;
-      border-top: 1px solid #eee;
-    }
-    .summary-section h2 {
-      margin: 0 0 8px;
-      font-size: 18px;
-    }
+        .header-container h1 {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
 
-    @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-      .header-right p {
-        text-align: left;
-      }
-      .about-container {
-        flex-direction: column;
-        text-align: center;
-      }
-      .about-text {
-        text-align: center;
-      }
-      .experience-container {
-        flex-direction: column;
-      }
-      .experience-left {
-        width: 100%;
-        margin-bottom: 8px;
-      }
-    }
-  </style>
+        .header-container p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+        }
+
+        .header-left {
+            text-align: left;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .header-right a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .header-right a:hover {
+            color: #305710;
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 2px solid #333;
+            padding-bottom: 2px;
+        }
+        .portfolio-link:hover {
+            color: #146919;
+            border-bottom: 2px solid #146919;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            text-align: center;
+        }
+
+        .about-me {
+            max-width: 1200px;
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            margin: auto;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px; 
+            width: 100%;
+        }
+
+        .about-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 30px;
+            border: 1px solid #ddd;
+        }
+
+        .about-text {
+            text-align: left;
+            max-width: 900px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.8; 
+        }
+
+        .project-title {
+            display: block; 
+            text-indent: 10ch;
+        }
+
+        .sub-title{
+            text-align: center;
+            font-size: 28px;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-image img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            .about-text {
+                text-align: center;
+            }
+        }
+
+        .experience-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .experience-title {
+            font-size: 24px;
+        }
+
+        .experience-left {
+            width: 350px;
+            text-align: left;
+            flex-shrink: 0;
+        }
+
+        .experience-right {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #777; 
+            color: #fff; 
+            padding: 5px 10px;
+            border-radius: 5px; 
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        li::before {
+            content: "∙ ";
+            color: rgb(88, 88, 88);
+            margin-right: 5px;
+        }
+
+        a {
+            color: inherit; 
+            font-weight: normal;
+        }
+
+        a:hover {
+            color: #305710;
+        }
+    </style>
 </head>
 <body>
-  <!-- 헤더 -->
-  <div class="header-container">
-    <div class="header-left">
-      <h1>최성장</h1>
-      <p>AI Backend Developer | 경력 기술서</p>
-    </div>
-    <div class="header-right">
-      <p>Email: <a href="mailto:palga65@gmail.com">palga65@gmail.com</a></p>
-      <p><a href="resume/Project_Portfolio.pdf" class="portfolio-link">AI_Project_Portfolio</a></p>
-    </div>
-  </div>
+    <!-- 폰트 로딩 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <div class="container">
+    <!-- 헤더 -->
+    <div class="header-container">
+        <div class="header-left">
+            <h1>최성장</h1>
+            <p>Backend & AI Engineer</p>
+        </div>
+
+        <div class="header-right">
+            <p>Email: <a href="mailto:palga65@gmail.com">palga65@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/GrowingChoi" target="_blank">github.com/GrowingChoi</a></p>
+            <p>Blog: <a href="https://blog.naver.com/growingdev95" target="_blank">blog.naver.com/growingdev95</a></p>
+            <p><a href="resume/Project_Portfolio.pdf" download class="portfolio-link">PORTFOLIO PDF</a></p>
+        </div>
+    </div>
+
     <!-- About Me -->
     <div class="about-me">
-      <p class="sub-title">About Me</p>
-      <div class="about-container">
-        <div class="about-image">
-          <img src="assets/profile.jpg" alt="Profile Image">
+        <p class="sub-title">About Me</p>
+        <div class="about-container">
+            <div class="about-image">
+                <!-- 실제 프로필 이미지 경로로 변경 -->
+                <img src="assets/profile.jpg" alt="Profile Image">
+            </div>
+            <div class="about-text">
+                <p>
+                    공공·무역·금융 도메인에서 <strong>Java & Spring 기반 백엔드</strong>를 담당하며,
+                    최근에는 <strong>RAG 기반 사내업무지원 챗봇</strong>까지 구축한 
+                    <strong>Backend & AI Engineer</strong>입니다.
+                </p>
+                <p>
+                    REST API 설계, <strong>인증·정산·통계</strong>와 같은 핵심 도메인 로직 개발과 함께,
+                    <strong>SQL 튜닝과 성능 개선</strong>을 통해 안정적인 서비스를 만드는 데 강점을 가지고 있습니다.
+                </p>
+                <p>🚀 문제를 끝까지 파고들어 <strong>원인 분석 → 개선 → 검증</strong>까지 수행하는 스타일</p>
+                <p>🚀 학습한 내용은 블로그와 문서로 정리해 팀원과 공유하는 것을 좋아함</p>
+                <p>🚀 단순 기능 구현이 아니라, <strong>사용자 경험과 운영 효율</strong>을 함께 고민하는 개발자</p>
+                <p>
+                    기존 공공 SI 경험에 더해, <strong>LLM + RAG 파이프라인</strong>을 직접 설계·구현한 경험을 바탕으로
+                    실제 서비스 환경에 AI를 안정적으로 녹여내는 백엔드 개발자를 지향하고 있습니다.
+                </p>
+            </div>
         </div>
-        <div class="about-text">
-          <p><strong>공공·금융 백엔드 경력</strong>과 <strong>RAG 기반 AI 서비스 개발 경험</strong>을 함께 가진 백엔드 개발자입니다.</p>
-          <p>Java/Spring 기반 대규모 시스템 개발 경험을 바탕으로, Django·Qdrant를 활용한 멀티턴 RAG 검색 시스템을 직접 설계하고 구축했습니다.</p>
-          <p>문제 정의 → 해결 전략 설계 → 서비스 레벨 구현까지의 전 과정을 스스로 끌고 가는 것을 좋아합니다.</p>
-          <p>문서 검색 자동화, 성능 튜닝, 운영 효율 개선에 관심이 많으며, 실제 수치로 개선 효과를 확인하는 것을 중요하게 생각합니다.</p>
+    </div>
+
+    <p class="sub-title">💼 Project Experience</p>
+
+    <!-- 1. NAVI – 사내업무지원 챗봇 -->
+    <div class="experience-container">
+        <div class="experience-left">
+            <p class="experience-title">NAVI – 사내업무지원 챗봇</p>
+            <span>SKN-AI-FAMILY 부트캠프 최종 프로젝트</span><br>
+            팀 프로젝트 / PM & 백엔드 리더<br>
+            📅 2025.03 ~ 2025.09
         </div>
-      </div>
+        <div class="experience-right">
+            <strong class="project-title">사내 규정·지침 문서를 빠르게 검색하고 답변해주는 RAG 기반 업무지원 챗봇</strong>
+            
+            <p><span class="badge">기술 스택</span></p>
+            <ul>
+                <li><strong>Backend:</strong> Python, Django, REST API</li>
+                <li><strong>AI / Data:</strong> OpenAI API, RAG, LangChain, KoE5 Embedding, Qdrant</li>
+                <li><strong>Infra:</strong> AWS EC2 / RDS / S3, Docker, Nginx, PostgreSQL</li>
+            </ul>
+
+            <p><span class="badge">주요 기능</span></p>
+            <ul>
+                <li>사내 규정·지침 PDF를 임베딩하여 <strong>자연어 질의 기반 문서 검색·질의응답</strong> 제공</li>
+                <li>Retriever–Reranker–Generator 구조의 <strong>RAG 파이프라인</strong> 설계</li>
+                <li>문서 유형, 도메인, 개정일 등의 <strong>메타데이터 필터링</strong>으로 검색 정확도 향상</li>
+                <li>세션 기반 멀티턴 대화 구조로 사용자의 연속 질의 맥락 반영</li>
+                <li>프롬프트 외부화 및 가드레일로 프롬프트 인젝션·환각 대응</li>
+            </ul>
+
+            <p><span class="badge">담당 구현 기능</span></p>
+            <ul>
+                <li>백엔드 API 및 <strong>요청/응답 포맷 정의</strong> (질문, 답변, 근거 문서 링크 등)</li>
+                <li>Qdrant 연동 및 <strong>임베딩/검색/필터링 로직</strong> 구현</li>
+                <li>세션·대화 히스토리 관리 및 멀티턴 RAG 파이프라인 구현</li>
+                <li>Docker Compose 기반 <strong>Backend–VectorDB–Frontend</strong> 통합 환경 구성</li>
+                <li>AWS EC2 배포 및 로그 기반 성능 모니터링/디버깅</li>
+            </ul>
+
+            <p><span class="badge">성과 및 결과</span></p>
+            <ul>
+                <li>기존 문서 수동 검색 평균 <strong>5~10분 → 챗봇 응답 7~10초</strong>로 단축</li>
+                <li>검색 실패율 약 30% → <strong>15% 이하</strong>로 감소</li>
+                <li>표준화된 API와 응답 포맷으로 프론트엔드 연동 및 유지보수성 향상</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- Experience -->
-    <p class="experience-section-title">💼 Experience</p>
-
-    <!-- NAVI -->
+    <!-- 2. 한국재정정보원 – e나라도움 -->
     <div class="experience-container">
-      <div class="experience-left">
-        <p class="experience-title">NAVI – 사내 업무지원 챗봇</p>
-        <strong>개인 프로젝트 (AI 부트캠프 최종)</strong><br>
-        역할: PM / Backend Lead<br>
-        기간: 2025.03 ~ 2025.09
-      </div>
-      <div class="experience-right">
-        <span class="project-title">RAG 기반 사내 규정·지침 검색 자동화 챗봇</span>
+        <div class="experience-left">
+            <p class="experience-title">e나라도움 기능개선</p>
+            <span>한국재정정보원 · (주)우리C&C</span><br>
+            백엔드 개발자<br>
+            📅 2022.07 ~ 2023.01 / 2023.10 ~ 2024.01
+        </div>
+        <div class="experience-right">
+            <strong class="project-title">국가 예산 집행·정산 지원 시스템의 정산·통계·대용량 처리 고도화</strong>
+            
+            <p><span class="badge">기술 스택</span></p>
+            <ul>
+                <li><strong>Backend:</strong> Java, Spring, MyBatis</li>
+                <li><strong>Frontend:</strong> JSP, JavaScript, jQuery</li>
+                <li><strong>Database:</strong> Oracle</li>
+            </ul>
 
-        <p><span class="badge">기술 스택</span></p>
-        <ul>
-          <li><strong>Backend / AI:</strong> Python, Django REST API, LangChain, KoE5, OpenAI, Upstage</li>
-          <li><strong>Vector DB:</strong> Qdrant (메타데이터 필터링)</li>
-          <li><strong>Infra:</strong> Docker, AWS EC2/RDS/S3, Nginx</li>
-        </ul>
+            <p><span class="badge">주요 기능</span></p>
+            <ul>
+                <li>NH지로 연동 기반 <strong>집행 정산 증빙 자동 처리</strong> 기능 개발</li>
+                <li>지출 내역 통계 및 <strong>시각화 화면</strong> 개발</li>
+                <li>보조사업·정보공시 영역 UI 개선 및 검색 기능 확장</li>
+                <li>대용량 데이터를 위한 <strong>커스텀 엑셀 다운로드 기능</strong> 설계 및 구현</li>
+            </ul>
 
-        <p><span class="badge">주요 역할</span></p>
-        <ul>
-          <li>세션 기반 멀티턴 RAG 파이프라인 설계 및 구현</li>
-          <li>문서 도메인/유형/개정일 기반 Qdrant 메타데이터 설계</li>
-          <li>프롬프트 외부화 및 보안 가드레일 구조 설계</li>
-          <li>React 프론트엔드와 연동되는 Django REST API 개발</li>
-        </ul>
+            <p><span class="badge">담당 구현 기능</span></p>
+            <ul>
+                <li>정산 증빙 처리 모듈, 통계 조회 서비스 로직 및 쿼리 작성</li>
+                <li>지로 연동 처리 과정의 <strong>오류 검증 및 예외 처리</strong> 로직 개선</li>
+                <li>엑셀 다운로드 시, 쿼리 조회와 엑셀 작성 병렬 처리 구조로 변경</li>
+                <li>보조사업 페이지 약 12개 화면의 검색 및 UI 개선</li>
+            </ul>
 
-        <p><span class="badge">성과</span></p>
-        <ul>
-          <li>문서 검색 시간 5~10분 → 7~10초로 단축</li>
-          <li>Retrieval Recall 65% → 83% 향상</li>
-          <li>검색 실패율 30% → 15% 이하로 감소</li>
-        </ul>
-      </div>
+            <p><span class="badge">성과 및 결과</span></p>
+            <ul>
+                <li>10만~40만 건 데이터 엑셀 다운로드 시간을 <strong>수십 분 → 약 3분</strong> 수준으로 단축</li>
+                <li>정산 오류율 감소 및 수작업 검증 업무 대폭 감소</li>
+                <li>현업 사용자의 통계·조회 편의성 개선으로 업무 만족도 향상</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- e나라도움 -->
+    <!-- 3. KOTRA 무역투자24 2차 고도화 -->
     <div class="experience-container">
-      <div class="experience-left">
-        <p class="experience-title">e나라도움 기능개선 사업</p>
-        한국재정정보원 / 우리C&C<br>
-        역할: 백엔드 개발자<br>
-        기간: 2022 ~ 2024 (연차별 투입)
-      </div>
-      <div class="experience-right">
-        <span class="project-title">보조금 정산·정보공시 모듈 기능 개선 및 성능 튜닝</span>
+        <div class="experience-left">
+            <p class="experience-title">KOTRA 무역투자24 2차 고도화</p>
+            <span>KOTRA · (주)우리C&C</span><br>
+            백엔드 개발자<br>
+            📅 2023.06 ~ 2023.10
+        </div>
+        <div class="experience-right">
+            <strong class="project-title">무역투자 통합 플랫폼의 통합 회원관리·권한·로그인 구조 고도화</strong>
 
-        <p><span class="badge">기술 스택</span></p>
-        <ul>
-          <li><strong>Backend:</strong> Java, Spring, MyBatis, Oracle</li>
-          <li><strong>Frontend:</strong> JSP, JavaScript, jQuery</li>
-        </ul>
+            <p><span class="badge">기술 스택</span></p>
+            <ul>
+                <li><strong>Backend:</strong> Java, Spring Boot, MyBatis</li>
+                <li><strong>Frontend:</strong> JSP, JavaScript</li>
+                <li><strong>Database:</strong> Oracle</li>
+            </ul>
 
-        <p><span class="badge">주요 역할</span></p>
-        <ul>
-          <li>보조사업 정산·통계·정보공시 관련 화면 및 비즈니스 로직 개발</li>
-          <li>대량 데이터 조회/다운로드 쿼리 튜닝 및 페이징 로직 개선</li>
-          <li>엑셀 다운로드 처리 방식 개선으로 대용량 데이터 안정 처리</li>
-        </ul>
+            <p><span class="badge">주요 기능</span></p>
+            <ul>
+                <li>기관·사용자별 <strong>통합 회원관리 및 권한 기반 접근제어</strong> 기능 개발</li>
+                <li>회원가입/로그인 프로세스 개선 및 다중 인증 정책 반영</li>
+                <li>동기식 JSP 기반 응답 구조를 <strong>Ajax 비동기 처리</strong>로 점진적 전환</li>
+            </ul>
 
-        <p><span class="badge">성과</span></p>
-        <ul>
-          <li>대량 데이터 조회·다운로드 처리 시간 체감 개선</li>
-          <li>정산 검증 로직 보완으로 운영팀 수동 검증 업무 감소</li>
-        </ul>
-      </div>
+            <p><span class="badge">담당 구현 기능</span></p>
+            <ul>
+                <li>역할/권한 기준 메뉴·기능 접근 제어 로직 구현</li>
+                <li>로그인, 세션, 로그아웃 처리 흐름 정리 및 예외 처리 강화</li>
+                <li>프론트와의 Ajax 연동을 고려한 API 응답 포맷 정리</li>
+            </ul>
+
+            <p><span class="badge">성과 및 결과</span></p>
+            <ul>
+                <li>로그인 처리 속도 <strong>약 30% 단축</strong></li>
+                <li>권한/인증 관련 오류 거의 0건 수준 유지</li>
+                <li>보안성과 사용자 편의성을 동시에 확보한 인증 구조 정립</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- KOTRA -->
+    <!-- 4. TradeFlow – SSO 인증 -->
     <div class="experience-container">
-      <div class="experience-left">
-        <p class="experience-title">KOTRA 무역투자24 고도화</p>
-        KOTRA / 우리C&C<br>
-        역할: 백엔드 개발자<br>
-        기간: 2023.03 ~ 2023.04
-      </div>
-      <div class="experience-right">
-        <span class="project-title">무역투자24 회원·인증 영역 기능 개선</span>
+        <div class="experience-left">
+            <p class="experience-title">디지털 무역기반 구축 (TradeFlow)</p>
+            <span>무역기반 SSO · (주)우리C&C</span><br>
+            백엔드 개발자<br>
+            📅 2022.04 ~ 2022.06
+        </div>
+        <div class="experience-right">
+            <strong class="project-title">무역 관련 기관 간 통합 인증(SSO) 시스템 구축</strong>
 
-        <p><span class="badge">기술 스택</span></p>
-        <ul>
-          <li><strong>Backend:</strong> Java, Spring, MyBatis, Oracle</li>
-          <li><strong>Frontend:</strong> JSP, JavaScript</li>
-        </ul>
+            <p><span class="badge">기술 스택</span></p>
+            <ul>
+                <li><strong>Backend:</strong> Java, Spring Boot, MyBatis</li>
+                <li><strong>Database:</strong> Oracle</li>
+                <li><strong>기타:</strong> REST API, JSON</li>
+            </ul>
 
-        <p><span class="badge">주요 역할</span></p>
-        <ul>
-          <li>로그인/회원가입/권한 검증 등 인증 관련 기능 개선</li>
-          <li>세션/쿠키 처리 및 예외상황 대응 로직 보완</li>
-          <li>공지·게시판 일부 기능 수정 및 운영 이슈 대응</li>
-        </ul>
+            <p><span class="badge">주요 기능 및 역할</span></p>
+            <ul>
+                <li>기관별 로그인 시스템을 통합하는 <strong>SSO 인증 로직</strong> 개발</li>
+                <li>인증 토큰 발급·검증, 세션 관리 로직 구현</li>
+                <li>API 연동 단계별 예외 처리 및 로깅 체계 정비</li>
+            </ul>
 
-        <p><span class="badge">성과</span></p>
-        <ul>
-          <li>인증 실패 관련 오류 케이스 감소 및 사용자 경험 개선</li>
-        </ul>
-      </div>
+            <p><span class="badge">성과 및 결과</span></p>
+            <ul>
+                <li>로그인 처리 속도 <strong>약 25% 개선</strong></li>
+                <li>다기관 환경에서도 인증 오류율 <strong>0.1% 이하</strong> 유지</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- 기타 프로젝트 요약 -->
-    <div class="summary-section">
-      <h2>📌 기타 프로젝트 요약</h2>
-      <ul>
-        <li>감정서 자동작성 시스템, 재제조 부품 유통 서비스 등 공공·금융·B2B 프로젝트 다수 참여</li>
-        <li>로그 기반 장애 분석, SQL 튜닝, 기능 개선 위주의 유지보수 경험</li>
-      </ul>
+    <!-- 5. 감정평가 자동작성 시스템 -->
+    <div class="experience-container">
+        <div class="experience-left">
+            <p class="experience-title">감정평가 자동작성 시스템</p>
+            <span>부동산 감정 · (주)우리C&C</span><br>
+            백엔드 개발자<br>
+            📅 2021.10 ~ 2022.04
+        </div>
+        <div class="experience-right">
+            <strong class="project-title">감정평가 보고서 자동 생성 및 수익환원법 계산 지원 시스템</strong>
+
+            <p><span class="badge">기술 스택</span></p>
+            <ul>
+                <li><strong>Backend:</strong> Java, Spring, MyBatis</li>
+                <li><strong>Frontend:</strong> JSP, JavaScript</li>
+                <li><strong>Database:</strong> Oracle</li>
+            </ul>
+
+            <p><span class="badge">주요 기능</span></p>
+            <ul>
+                <li>감정평가서 양식 기반 <strong>자동 작성 로직</strong> 구현</li>
+                <li>수익환원법 등 평가 로직 계산 모듈 구현</li>
+                <li>파일 업로드 및 첨부 문서 관리 기능 개발</li>
+            </ul>
+
+            <p><span class="badge">담당 구현 기능</span></p>
+            <ul>
+                <li>감정평가서 데이터 모델링 및 자동 생성 서비스 구현</li>
+                <li>수익환원법 계산 로직과 예외 케이스 처리</li>
+                <li>업로드 파일 검증 및 메타데이터 관리 기능 개발</li>
+            </ul>
+
+            <p><span class="badge">성과 및 결과</span></p>
+            <ul>
+                <li>감정평가서 작성 시간 <strong>약 50% 단축</strong></li>
+                <li>수작업 계산 오류율 <strong>약 20% 감소</strong></li>
+            </ul>
+        </div>
     </div>
-  </div>
+
+    <!-- 6. 자동차 재제조 부품 유통 플랫폼 -->
+    <div class="experience-container">
+        <div class="experience-left">
+            <p class="experience-title">재제조 부품 유통 플랫폼</p>
+            <span>자동차 부품 · (주)우리C&C</span><br>
+            백엔드 개발자<br>
+            📅 2021.07 ~ 2021.10
+        </div>
+        <div class="experience-right">
+            <strong class="project-title">재제조 자동차 부품 유통 및 재고 관리 웹 시스템</strong>
+
+            <p><span class="badge">기술 스택</span></p>
+            <ul>
+                <li><strong>Backend:</strong> Java, Spring, MyBatis</li>
+                <li><strong>Frontend:</strong> JSP, JavaScript</li>
+                <li><strong>Database:</strong> Oracle</li>
+            </ul>
+
+            <p><span class="badge">주요 기능</span></p>
+            <ul>
+                <li>관리자용 재고·주문 관리 기능 개발</li>
+                <li>부품 검색 및 필터링 기능 구현</li>
+                <li>주문 상태 관리 및 이력 조회 기능 개발</li>
+            </ul>
+
+            <p><span class="badge">담당 구현 기능</span></p>
+            <ul>
+                <li>재고·주문 관련 도메인 모델 및 서비스 로직 구현</li>
+                <li>검색 기준(차종, 부품번호 등)에 따른 조회 쿼리 작성</li>
+                <li>관리자 화면과 연동되는 API 및 JSP 화면 개발</li>
+            </ul>
+
+            <p><span class="badge">성과 및 결과</span></p>
+            <ul>
+                <li>재고 관리·주문 처리 프로세스 자동화로 <strong>업무 효율 약 30% 개선</strong></li>
+                <li>검색 기능 개선으로 부품 조회 시간 단축 및 사용자 만족도 향상</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 7. 기업 내부 고객관리 시스템 -->
+    <div class="experience-container">
+        <div class="experience-left">
+            <p class="experience-title">기업 내부 고객관리 시스템</p>
+            <span>내부 운영 시스템 · (주)우리C&C</span><br>
+            백엔드 개발자<br>
+            📅 2021.06 ~ 2021.07
+        </div>
+        <div class="experience-right">
+            <strong class="project-title">기업 내부 고객 정보 및 공지 관리 웹 시스템</strong>
+
+            <p><span class="badge">기술 스택</span></p>
+            <ul>
+                <li><strong>Backend:</strong> Java, Spring, MyBatis</li>
+                <li><strong>Frontend:</strong> JSP, JavaScript, jQuery</li>
+                <li><strong>Database:</strong> Oracle</li>
+            </ul>
+
+            <p><span class="badge">주요 기능</span></p>
+            <ul>
+                <li>고객 검색 및 상세 조회 기능 개발</li>
+                <li>공지사항 등록/수정/삭제 및 <strong>첨부파일 업로드</strong> 기능 개발</li>
+                <li>UI 개선 및 사용성 향상을 위한 화면 리팩토링</li>
+            </ul>
+
+            <p><span class="badge">담당 구현 기능</span></p>
+            <ul>
+                <li>고객 검색 조건(이름, 연락처, 상태 등)에 따른 쿼리 및 서비스 구현</li>
+                <li>공지사항 + 첨부파일을 함께 처리하는 등록·수정 로직 구현</li>
+                <li>기존 정적 페이지를 동적인 화면 전환 구조로 개선</li>
+            </ul>
+
+            <p><span class="badge">성과 및 결과</span></p>
+            <ul>
+                <li>공지·고객 정보 관리의 일관성 확보 및 누락·오류 감소</li>
+                <li>UI 개선으로 내부 사용자들의 접근성과 업무 효율 향상</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>📌 Summary</h2>
+    <ul>
+        <li>공공·무역·금융 도메인에서 <strong>Java / Spring</strong> 기반 백엔드 개발 경험 다수</li>
+        <li>Python / Django 기반 <strong>RAG 챗봇 백엔드 및 AI 파이프라인</strong> 설계·구현 경험</li>
+        <li><strong>SQL 튜닝, 인덱스 최적화, 대용량 처리·성능 개선</strong> 경험 보유</li>
+        <li>AWS EC2, RDS, S3, Docker, Nginx를 활용한 배포·운영 경험</li>
+        <li>문서화와 코드 리뷰를 통해 <strong>협업과 유지보수</strong>에 강한 관심을 가진 개발자</li>
+        <br><br>
+    </ul>
+
 </body>
 </html>
