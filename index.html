@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최성장 | AI Backend Developer</title>
+  <style>
+    body {
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f7f7f9;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 30px auto 10px;
+      padding: 20px;
+    }
+    .header-container h1 {
+      font-size: 26px;
+      margin-bottom: 4px;
+    }
+    .header-container p {
+      font-size: 16px;
+      color: #666;
+      margin: 0;
+    }
+    .header-left {
+      text-align: left;
+    }
+    .header-right p {
+      margin: 2px 0;
+      text-align: right;
+    }
+    .header-right a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .header-right a:hover {
+      color: #146919;
+    }
+    .portfolio-link {
+      display: inline-block;
+      color: #333;
+      text-decoration: none;
+      border-bottom: 2px solid #333;
+      padding-bottom: 2px;
+      margin-top: 4px;
+    }
+    .portfolio-link:hover {
+      color: #146919;
+      border-color: #146919;
+    }
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto 40px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      padding-bottom: 20px;
+    }
+    .sub-title {
+      text-align: center;
+      font-size: 24px;
+      margin: 24px 0 8px;
+      font-weight: 700;
+    }
+    .about-me {
+      padding: 0 24px 24px;
+    }
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 8px 0 0;
+    }
+    .about-image img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #ddd;
+    }
+    .about-text {
+      text-align: left;
+      max-width: 900px;
+    }
+    .about-text p {
+      font-size: 15px;
+      color: #444;
+      margin: 4px 0;
+    }
+
+    .experience-section-title {
+      text-align: center;
+      font-size: 22px;
+      margin: 16px 0;
+      font-weight: 700;
+    }
+    .experience-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 24px;
+      border-top: 1px solid #eee;
+    }
+    .experience-left {
+      width: 320px;
+      text-align: left;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+    .experience-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .experience-right {
+      flex-grow: 1;
+      text-align: left;
+      font-size: 14px;
+    }
+    .project-title {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #777;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 12px;
+      margin-top: 6px;
+      margin-bottom: 4px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 4px 0 8px;
+    }
+    li {
+      margin-bottom: 3px;
+    }
+    li::before {
+      content: "∙ ";
+      color: #555;
+      margin-right: 4px;
+    }
+    a {
+      color: inherit;
+    }
+    a:hover {
+      color: #146919;
+    }
+    .summary-section {
+      padding: 16px 24px 24px;
+      border-top: 1px solid #eee;
+    }
+    .summary-section h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .header-right p {
+        text-align: left;
+      }
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-text {
+        text-align: center;
+      }
+      .experience-container {
+        flex-direction: column;
+      }
+      .experience-left {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더 -->
+  <div class="header-container">
+    <div class="header-left">
+      <h1>최성장</h1>
+      <p>AI Backend Developer | 경력 기술서</p>
+    </div>
+    <div class="header-right">
+      <p>Email: <a href="mailto:palga65@gmail.com">palga65@gmail.com</a></p>
+      <p><a href="resume/career_description.pdf" class="portfolio-link">CAREER PDF</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- About Me -->
+    <div class="about-me">
+      <p class="sub-title">About Me</p>
+      <div class="about-container">
+        <div class="about-image">
+          <img src="assets/profile.jpg" alt="Profile Image">
+        </div>
+        <div class="about-text">
+          <p><strong>공공·금융 백엔드 경력</strong>과 <strong>RAG 기반 AI 서비스 개발 경험</strong>을 함께 가진 백엔드 개발자입니다.</p>
+          <p>Java/Spring 기반 대규모 시스템 개발 경험을 바탕으로, Django·Qdrant를 활용한 멀티턴 RAG 검색 시스템을 직접 설계하고 구축했습니다.</p>
+          <p>문제 정의 → 해결 전략 설계 → 서비스 레벨 구현까지의 전 과정을 스스로 끌고 가는 것을 좋아합니다.</p>
+          <p>문서 검색 자동화, 성능 튜닝, 운영 효율 개선에 관심이 많으며, 실제 수치로 개선 효과를 확인하는 것을 중요하게 생각합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <p class="experience-section-title">💼 Experience</p>
+
+    <!-- NAVI -->
+    <div class="experience-container">
+      <div class="experience-left">
+        <p class="experience-title">NAVI – 사내 업무지원 챗봇</p>
+        <strong>개인 프로젝트 (AI 부트캠프 최종)</strong><br>
+        역할: PM / Backend Lead<br>
+        기간: 2025.03 ~ 2025.09
+      </div>
+      <div class="experience-right">
+        <span class="project-title">RAG 기반 사내 규정·지침 검색 자동화 챗봇</span>
+
+        <p><span class="badge">기술 스택</span></p>
+        <ul>
+          <li><strong>Backend / AI:</strong> Python, Django REST API, LangChain, KoE5, OpenAI, Upstage</li>
+          <li><strong>Vector DB:</strong> Qdrant (메타데이터 필터링)</li>
+          <li><strong>Infra:</strong> Docker, AWS EC2/RDS/S3, Nginx</li>
+        </ul>
+
+        <p><span class="badge">주요 역할</span></p>
+        <ul>
+          <li>세션 기반 멀티턴 RAG 파이프라인 설계 및 구현</li>
+          <li>문서 도메인/유형/개정일 기반 Qdrant 메타데이터 설계</li>
+          <li>프롬프트 외부화 및 보안 가드레일 구조 설계</li>
+          <li>React 프론트엔드와 연동되는 Django REST API 개발</li>
+        </ul>
+
+        <p><span class="badge">성과</span></p>
+        <ul>
+          <li>문서 검색 시간 5~10분 → 7~10초로 단축</li>
+          <li>Retrieval Recall 65% → 83% 향상</li>
+          <li>검색 실패율 30% → 15% 이하로 감소</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- e나라도움 -->
+    <div class="experience-container">
+      <div class="experience-left">
+        <p class="experience-title">e나라도움 기능개선 사업</p>
+        한국재정정보원 / 우리C&C<br>
+        역할: 백엔드 개발자<br>
+        기간: 2022 ~ 2024 (연차별 투입)
+      </div>
+      <div class="experience-right">
+        <span class="project-title">보조금 정산·정보공시 모듈 기능 개선 및 성능 튜닝</span>
+
+        <p><span class="badge">기술 스택</span></p>
+        <ul>
+          <li><strong>Backend:</strong> Java, Spring, MyBatis, Oracle</li>
+          <li><strong>Frontend:</strong> JSP, JavaScript, jQuery</li>
+        </ul>
+
+        <p><span class="badge">주요 역할</span></p>
+        <ul>
+          <li>보조사업 정산·통계·정보공시 관련 화면 및 비즈니스 로직 개발</li>
+          <li>대량 데이터 조회/다운로드 쿼리 튜닝 및 페이징 로직 개선</li>
+          <li>엑셀 다운로드 처리 방식 개선으로 대용량 데이터 안정 처리</li>
+        </ul>
+
+        <p><span class="badge">성과</span></p>
+        <ul>
+          <li>대량 데이터 조회·다운로드 처리 시간 체감 개선</li>
+          <li>정산 검증 로직 보완으로 운영팀 수동 검증 업무 감소</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- KOTRA -->
+    <div class="experience-container">
+      <div class="experience-left">
+        <p class="experience-title">KOTRA 무역투자24 고도화</p>
+        KOTRA / 우리C&C<br>
+        역할: 백엔드 개발자<br>
+        기간: 2023.03 ~ 2023.04
+      </div>
+      <div class="experience-right">
+        <span class="project-title">무역투자24 회원·인증 영역 기능 개선</span>
+
+        <p><span class="badge">기술 스택</span></p>
+        <ul>
+          <li><strong>Backend:</strong> Java, Spring, MyBatis, Oracle</li>
+          <li><strong>Frontend:</strong> JSP, JavaScript</li>
+        </ul>
+
+        <p><span class="badge">주요 역할</span></p>
+        <ul>
+          <li>로그인/회원가입/권한 검증 등 인증 관련 기능 개선</li>
+          <li>세션/쿠키 처리 및 예외상황 대응 로직 보완</li>
+          <li>공지·게시판 일부 기능 수정 및 운영 이슈 대응</li>
+        </ul>
+
+        <p><span class="badge">성과</span></p>
+        <ul>
+          <li>인증 실패 관련 오류 케이스 감소 및 사용자 경험 개선</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 기타 프로젝트 요약 -->
+    <div class="summary-section">
+      <h2>📌 기타 프로젝트 요약</h2>
+      <ul>
+        <li>감정서 자동작성 시스템, 재제조 부품 유통 서비스 등 공공·금융·B2B 프로젝트 다수 참여</li>
+        <li>로그 기반 장애 분석, SQL 튜닝, 기능 개선 위주의 유지보수 경험</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
